@@ -1,0 +1,17 @@
+/*
+* @Author: beat
+* @Date:   2018-09-17 11:44:18
+* @Last Modified by:   beat
+* @Last Modified time: 2018-09-17 11:52:21
+*/
+.nav-simple{
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+.nav-simple .logo{
+    font-size: 26px;
+    font-weight: bold;
+    color: #c60023;
+}
