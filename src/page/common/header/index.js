@@ -2,7 +2,7 @@
 * @Author: beat
 * @Date:   2018-09-18 10:41:27
 * @Last Modified by:   beat
-* @Last Modified time: 2018-09-18 11:15:14
+* @Last Modified time: 2018-09-20 23:52:44
 */
 require('./index.css');
 var _mm   = require('util/mm.js');
@@ -13,7 +13,7 @@ var header = {
     },
     onload : function(){
         var keyword=_mm.getUrlParam('keyword');
-        // keywo存在，则回填输入框
+        // keyword存在，则回填输入框
         if (keyword) {
             $('#search-input').val(keyword);
         };

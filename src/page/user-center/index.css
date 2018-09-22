@@ -1,0 +1,16 @@
+/*
+* @Author: beat
+* @Date:   2018-09-21 22:25:46
+* @Last Modified by:   beat
+* @Last Modified time: 2018-09-22 00:13:56
+*/
+.form-line{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.form-line .label{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+}

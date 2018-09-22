@@ -2,7 +2,7 @@
 * @Author: beat
 * @Date:   2018-09-17 10:01:45
 * @Last Modified by:   beat
-* @Last Modified time: 2018-09-17 11:20:34
+* @Last Modified time: 2018-09-21 23:25:54
 */
 /* css reset */
 *{
@@ -32,6 +32,24 @@ input[type='checkbox']{
     width: 1080px;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
+}
+
+/* panel */
+.panel{
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.panel .panel-title{
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+    padding: 10px;
     overflow: hidden;
 }
 

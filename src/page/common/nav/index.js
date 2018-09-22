@@ -2,7 +2,7 @@
 * @Author: beat
 * @Date:   2018-09-17 16:32:40
 * @Last Modified by:   beat
-* @Last Modified time: 2018-09-17 17:43:07
+* @Last Modified time: 2018-09-21 00:08:00
 */
 require('./index.css');
 var _mm   = require('util/mm.js');
@@ -23,12 +23,12 @@ var nav = {
         });
         // 注册点击事件
         $('.js-register').click(function(){
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         });
         // 退出点击事件
         $('.js-logout').click(function(){
             _user.logout(function(res){
-                window.location.relaod();
+                window.location.reload();
             }, function(errMsg){
                 _mm.errorTips(errMsg);
             });

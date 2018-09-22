@@ -2,7 +2,7 @@
 * @Author: beat
 * @Date:   2018-09-17 11:44:18
 * @Last Modified by:   beat
-* @Last Modified time: 2018-09-17 11:52:21
+* @Last Modified time: 2018-09-21 23:00:16
 */
 .nav-simple{
     height: 60px;
@@ -14,4 +14,5 @@
     font-size: 26px;
     font-weight: bold;
     color: #c60023;
+    text-decoration: none;
 }

@@ -2,7 +2,7 @@
 * @Author: beat
 * @Date:   2018-09-12 22:30:22
 * @Last Modified by:   beat
-* @Last Modified time: 2018-09-17 10:16:07
+* @Last Modified time: 2018-09-22 10:45:37
 */
 var Hogan = require('hogan.js');
 var conf = {
@@ -56,7 +56,7 @@ var _mm = {
         alert(msg || '操作成功！');
     },
     // 错误提示
-    errorTips : function(mag){
+    errorTips : function(msg){
         alert(msg || '哪里不对了~');
     },
     // 字段的验证，支持非空、手机、邮箱的判断
@@ -71,13 +71,13 @@ var _mm = {
             return /^1\d{10}$/.test(value);
         }
         // 邮箱格式验证
-        if('phone' == type){
+        if('email' == type){
             return /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(value);
         }
     },
     // 统一登录处理
     doLogin :function(){
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     goHome :function(){
         window.location.href = './index.html';

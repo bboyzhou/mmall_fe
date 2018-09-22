@@ -2,12 +2,12 @@
 * @Author: beat
 * @Date:   2018-09-18 11:38:23
 * @Last Modified by:   beat
-* @Last Modified time: 2018-09-18 12:28:43
+* @Last Modified time: 2018-09-22 00:02:31
 */
 /* 导航主体 */
 .nav-side{
     float: left;
-    width: 160px;
+    width: 130px;
     min-height: 100px;
 }
 .nav-side .nav-item{
@@ -21,6 +21,7 @@
     color: #c60023;
 }
 /* 右侧内容区 */
-.coontent.with-nav{
+.content.with-nav{
     float: left;
+    width: 950px;
 }
