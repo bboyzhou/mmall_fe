@@ -2,16 +2,17 @@
 * @Author: beat
 * @Date:   2018-09-18 10:41:27
 * @Last Modified by:   beat
-* @Last Modified time: 2018-09-20 23:52:44
+* @Last Modified time: 2018-09-23 11:35:23
 */
 require('./index.css');
 var _mm   = require('util/mm.js');
 // 通用页面头部
 var header = {
     init : function(){
+        this.onLoad();
         this.bindEvent();
     },
-    onload : function(){
+    onLoad : function(){
         var keyword=_mm.getUrlParam('keyword');
         // keyword存在，则回填输入框
         if (keyword) {
