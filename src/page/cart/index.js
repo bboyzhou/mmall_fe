@@ -2,7 +2,7 @@
 * @Author: beat
 * @Date:   2018-10-19 14:44:56
 * @Last Modified by:   beat
-* @Last Modified time: 2018-10-19 20:22:28
+* @Last Modified time: 2018-10-21 14:30:27
 */
 require('./index.css');
 require('page/common/header/index.js');
@@ -127,7 +127,7 @@ var page = {
         $(document).on('click', '.btn-submit', function(){
             // 总价大于0，进行提交
             if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-                window.location.href = './confirm.html';
+                window.location.href = './order-confirm.html';
             }else{
                 _mm.errorTips('请选择商品后提交');
             }
