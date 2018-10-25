@@ -2,15 +2,15 @@
 * @Author: beat
 * @Date:   2018-10-24 09:40:09
 * @Last Modified by:   beat
-* @Last Modified time: 2018-10-24 11:06:16
+* @Last Modified time: 2018-10-25 10:44:23
 */
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
-var navSide = require('page/common/nav-side/index.js');
-var _mm = require('util/mm.js');
-var _order = require('service/order-service.js');
-var templateIndex = require('./index.string');
+var navSide         = require('page/common/nav-side/index.js');
+var _mm             = require('util/mm.js');
+var _order          = require('service/order-service.js');
+var templateIndex   = require('./index.string');
 // page 逻辑部分
 var page = {
     data: {
