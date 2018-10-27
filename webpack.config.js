@@ -2,7 +2,7 @@
 * @Author: zj
 * @Date:   2018-09-05 22:39:48
 * @Last Modified by:   beat
-* @Last Modified time: 2018-10-25 10:37:21
+* @Last Modified time: 2018-10-27 22:34:37
 */
 const path        = require('path');
 var Ex            = require('extract-text-webpack-plugin');
@@ -18,6 +18,7 @@ var getHtmlConfig = function(name,title){
   return{
       template : './src/view/' + name + '.html',
       filename : 'view/' + name + '.html',
+      favicon  : './favicon.ico',
       title    : title,
       inject   : true,
       hash     : true,
@@ -28,7 +29,7 @@ var getHtmlConfig = function(name,title){
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // webpack config
-module.exports = {
+var config = {
   entry: {
     'common'             : ['./src/page/common/index.js'],
     'index'              : ['./src/page/index/index.js'],
@@ -46,11 +47,12 @@ module.exports = {
     'user-center-update' : ['./src/page/user-center-update/index.js'],
     'user-pass-update'   : ['./src/page/user-pass-update/index.js'],
     'result'             : ['./src/page/result/index.js'],
+    'about'              : ['./src/page/about/index.js'],
 },
   output: {
-    filename : 'js/[name].js',
-    path : path.resolve(__dirname, 'dist'),
-    publicPath : '/dist'
+    filename    : 'js/[name].js',
+    path        : __dirname + '/dist/',
+    publicPath  : WEBPACK_ENV==='dev' ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
   },
   externals:{
     'jquery':'window.jQuery'
@@ -59,7 +61,14 @@ module.exports = {
     loaders: [
       { test: /\.css$/, loader: Ex.extract('style-loader', 'css-loader','less-loader') },
       { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
-      { test: /\.string$/, loader: 'html-loader'}      
+      { 
+        test: /\.string$/, 
+        loader: 'html-loader',
+        query : {
+          minimize : true,
+          removeAttributeQuotes : false
+        }
+      }      
     ]
   },
   resolve :{
@@ -95,9 +104,12 @@ module.exports = {
     new HtmlWebpackPlugin(getHtmlConfig('user-center-update','修改个人信息')),
     new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改密码')),
     new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
+    new HtmlWebpackPlugin(getHtmlConfig('about','关于MMall')),
   ]
 };
 
 if(WEBPACK_ENV==='dev'){
   config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
 }
+
+module.exports =config;
