@@ -52,7 +52,7 @@ var config = {
   output: {
     filename    : 'js/[name].js',
     path        : __dirname + '/dist/',
-    publicPath  : WEBPACK_ENV==='dev' ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
+    publicPath  : WEBPACK_ENV==='dev' ? '/dist/' : '//s.leyigou.store/mmall_fe/dist/',
   },
   externals:{
     'jquery':'window.jQuery'
