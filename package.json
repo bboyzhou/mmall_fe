@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git@github.com:bboyzhou/mmall_fe.git"
   },
-  "author": "Rosen",
+  "author": "Beat",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^0.28.1",
