@@ -1,24 +1,20 @@
 {
-  "name": "mmall_fe",
-  "version": "1.0.0",
+  "name": "mmall-fe",
+  "version": "1.0.1",
   "description": "mmall前端代码",
   "main": "index.js",
   "scripts": {
-    "dev_mac": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
-    "dist_mac": "WEBPACK_ENV=online webpack -p",
-    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
-    "dist": "set WEBPACK_ENV=online && webpack -p"
+    "dev": "./node_modules/.bin/webpack-dev-server",
+    "dev_win": "./node_modules/.bin/webpack-dev-server",
+    "dist": "WEBPACK_ENV=online ./node_modules/.bin/webpack -p",
+    "dist_win": "set WEBPACK_ENV=online&& ./node_modules/.bin/webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bboyzhou/mmall_fe.git"
+    "url": "git@github.com:bboyzhou/mmall_fe.git"
   },
-  "author": "Beat",
+  "author": "Rosen",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bboyzhou/mmall_fe/issues"
-  },
-  "homepage": "https://github.com/bboyzhou/mmall_fe#readme",
   "devDependencies": {
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -35,3 +31,4 @@
     "hogan.js": "^3.0.2"
   }
 }
+
